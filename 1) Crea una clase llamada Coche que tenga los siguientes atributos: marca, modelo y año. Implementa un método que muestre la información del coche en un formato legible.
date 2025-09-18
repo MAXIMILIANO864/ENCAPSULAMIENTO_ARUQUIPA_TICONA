@@ -1,0 +1,12 @@
+class Coche:
+    def __init__(self, marca, modelo, año):
+        self.marca = marca
+        self.modelo = modelo
+        self.año = año
+    def mostrar_informacion(self):
+        return f"Coche: {self.marca} {self.modelo}, Año: {self.año}"
+if __name__ == "__main__":
+    auto1 = Coche("Toyota", "Capcom", 1997)
+    print(auto1.mostrar_informacion())
+    auto2 = Coche("Ford", "EA", 2010)
+    print(auto2.mostrar_informacion())
