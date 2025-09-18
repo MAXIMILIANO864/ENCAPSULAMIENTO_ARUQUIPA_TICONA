@@ -1,0 +1,16 @@
+class Juego:
+    def __init__(self, nombre: str, genero: str, precio: float):
+        self.nombre = nombre
+        self.genero = genero
+        self.precio = precio
+    def mostrar_info(self):
+        print(f"Juego: {self.nombre}, Género: {self.genero}, Precio: ${self.precio:.2f}")
+    def esta_en_oferta(self, valor: float):
+        return self.precio < valor
+if __name__ == "__main__":
+    j1 = Juego("Megaman", "Accion", 25.0)
+    j1.mostrar_info()
+    print("¿Está en oferta (< 30)?", j1.esta_en_oferta(30))
+    j2 = Juego("Rockman 8", "Accion y Aventura", 70.0)
+    j2.mostrar_info()
+    print("¿Está en oferta (< 50)?", j2.esta_en_oferta(50))
