@@ -1,0 +1,23 @@
+class Empleado:
+    def __init__(self, nombre: str, salario: float, departamento: str):
+        self.nombre = nombre
+        self.salario = salario
+        self.departamento = departamento
+    def aumentar_salario(self, porcentaje: float):
+        if porcentaje <= 0:
+            print("El porcentaje debe ser mayor que 0.")
+            return
+        aumento = self.salario * (porcentaje / 100)
+        self.salario += aumento
+        print(f"Salario aumentado en {porcentaje}%. Nuevo salario: ${self.salario:.2f}")
+    def mostrar_info(self):
+        print(f"Nombre: {self.nombre}, Salario: ${self.salario:.2f}, Departamento: {self.departamento}")
+if __name__ == "__main__":
+    emp1 = Empleado("Carla Gómez", 50000, "Recursos Humanos")
+    emp1.mostrar_info()
+    emp1.aumentar_salario(10)
+    emp1.mostrar_info()
+    emp2 = Empleado("Juan Pérez", 40000, "IT")
+    emp2.mostrar_info()
+    emp2.aumentar_salario(5)
+    emp2.mostrar_info()
