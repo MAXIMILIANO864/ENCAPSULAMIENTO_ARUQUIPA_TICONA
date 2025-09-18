@@ -1,0 +1,18 @@
+import math
+class Circulo:
+    def __init__(self, radio: float):
+        if radio < 0:
+            raise ValueError("El radio no puede ser negativo.")
+        self.radio = radio
+    def area(self):
+        return math.pi * self.radio ** 2
+    def circunferencia(self):
+        return 2 * math.pi * self.radio
+    def mostrar_info(self):
+        print(f"Radio: {self.radio}, Área: {self.area():.2f}, Circunferencia: {self.circunferencia():.2f}")
+if __name__ == "__main__":
+    c1 = Circulo(5)
+    c1.mostrar_info()
+
+    c2 = Circulo(2.5)
+    c2.mostrar_info()
