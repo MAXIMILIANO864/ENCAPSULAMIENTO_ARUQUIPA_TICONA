@@ -1,0 +1,15 @@
+class Rectangulo:
+    def __init__(self, base: float, altura: float):
+        self.base = base
+        self.altura = altura
+    def area(self):
+        return self.base * self.altura
+    def perimetro(self):
+        return 2 * (self.base + self.altura)
+    def mostrar_info(self):
+        print(f"Base: {self.base}, Altura: {self.altura}, Área: {self.area()}, Perímetro: {self.perimetro()}")
+if __name__ == "__main__":
+    rect1 = Rectangulo(10, 5)
+    rect1.mostrar_info()
+    rect2 = Rectangulo(7.5, 3.2)
+    rect2.mostrar_info()
